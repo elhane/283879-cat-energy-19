@@ -54,13 +54,13 @@
           <fieldset class="form__fieldset">
             <legend class="visually-hidden">Тип программы</legend>
 
-            <input class="form__input-radio" type="radio" name="weight-loss" id="weight-loss"/>
+            <input class="form__input-radio" type="radio" name="goal" value="weight-loss" id="weight-loss"/>
             <label class="form__label" for="weight-loss">Похудение</label>
 
-            <input class="form__input-radio" type="radio" name="mass-gain" id="mass-gain"/>
+            <input class="form__input-radio" type="radio" name="goal" value="mass-gain" id="mass-gain"/>
             <label class="form__label" for="mass-gain">Набор массы</label>
 
-            <input class="form__input-radio" type="radio" name="advice" id="advice" />
+            <input class="form__input-radio" type="radio" name="goal" value="advice" id="advice"/>
             <label class="form__label" for="advice">Не знаю (Нужен ваш совет)</label>
           </fieldset>
 
@@ -76,9 +76,8 @@
 
           <fieldset class="form__fieldset">
             <legend class="form__legend">Комментарий</legend>
-
-            <label class="visually-hidden" for="comment">Поле для текста</label>
-            <textarea name="comment" id="comment" cols="30" rows="10" placeholder="Расскажите обо всех повадках кота"></textarea>
+            <label class="form__label" for="comment"></label>
+            <textarea class="form__textarea" name="comment" id="comment" cols="30" rows="10" placeholder="Расскажите обо всех повадках кота"></textarea>
           </fieldset>
 
           <fieldset class="form__fieldset">
@@ -101,7 +100,9 @@
         </form>
         <p class="program-selection__text">* — Обязательные поля</p>
       </section>
+    </main>
 
+    <footer class="page-footer">
       <section class="collaboration">
         <h2 class="collaboration__title">Приглашаем к сотрудничеству дилеров!</h2>
         <p class="collaboration__text">ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</p>
@@ -112,9 +113,6 @@
           </div>
           </div>
       </section>
-    </main>
-
-    <footer class="page-footer">
       <div class="page-footer__logo">
         <a href="index.html"><img src="https://via.placeholder.com/128x24" alt=""></a>
       </div>
