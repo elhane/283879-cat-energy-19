@@ -30,10 +30,89 @@
     </header>
 
     <main>
+      <h1 class="page-title">Подбор программы</h1>
+      <p class="page-title-text">Заполните анкету и мы подберем программу питания для вашего кота</p>
 
+
+      <section class="program-selection">
+        <h2 class="visually-hidden">Форма для подбора программы питания вашего кота</h2>
+
+        <form class="program-selection__form form" action="https://echo.htmlacademy.ru/courses" method="post">
+          <fieldset class="form__fieldset">
+            <legend class="visually-hidden">Данные кота</legend>
+
+            <label class="form__label" for="cat-name">Имя:</label>
+            <input class="form__input-field" type="text" id="cat-name" name="cat-name" placeholder="Барсик"/>
+
+            <label class="form__label" for="cat-weight">Вес:</label>
+            <input class="form__input-field" type="number" id="cat-weight" name="cat-weight" placeholder="7"/>
+
+            <label class="form__label" for="cat-age">Возраст:</label>
+            <input class="form__input-field" type="number" id="cat-age" name="cat-age" placeholder="7"/>
+          </fieldset>
+
+          <fieldset class="form__fieldset">
+            <legend class="visually-hidden">Тип программы</legend>
+
+            <input class="form__input-radio" type="radio" name="goal" value="weight-loss" id="weight-loss"/>
+            <label class="form__label" for="weight-loss">Похудение</label>
+
+            <input class="form__input-radio" type="radio" name="goal" value="mass-gain" id="mass-gain"/>
+            <label class="form__label" for="mass-gain">Набор массы</label>
+
+            <input class="form__input-radio" type="radio" name="goal" value="advice" id="advice"/>
+            <label class="form__label" for="advice">Не знаю (Нужен ваш совет)</label>
+          </fieldset>
+
+          <fieldset class="form__fieldset">
+            <legend class="form__legend">Контактные данные (владельца кота)</legend>
+
+            <label class="form__label" for="email">E-mail:*</label>
+            <input class="form__input-field form__input-field--email-icon" type="email" id="email" name="email" placeholder="kuklachev@gmail.com"/>
+
+            <label class="form__label" for="phone-number">Телефон:*</label>
+            <input class="form__input-field form__input-field--phone-icon" type="tel" id="phone-number" name="phone-number" placeholder="8 (960) 900-60-90"/>
+          </fieldset>
+
+          <fieldset class="form__fieldset">
+            <legend class="form__legend">Комментарий</legend>
+            <label class="form__label" for="comment"></label>
+            <textarea class="form__textarea" name="comment" id="comment" cols="30" rows="10" placeholder="Расскажите обо всех повадках кота"></textarea>
+          </fieldset>
+
+          <fieldset class="form__fieldset">
+            <legend class="form__legend">Дополнительно</legend>
+
+            <input class="form__input-checkbox" type="checkbox" name="sweetener" id="sweetener" checked/>
+            <label class="form__label" for="sweetener">Сахарозаменитель</label>
+
+            <input class="form__input-checkbox" type="checkbox" name="water" id="water"/>
+            <label class="form__label" for="water">Питьевая вода</label>
+
+            <input class="form__input-checkbox" type="checkbox" name="milk" id="milk"/>
+            <label class="form__label" for="milk">Молоко</label>
+
+            <input class="form__input-checkbox" type="checkbox" name="vitamins" id="vitamins"/>
+            <label class="form__label" for="vitamins">Витамины</label>
+          </fieldset>
+
+          <button class="form__button button" type="submit">Отправить заявку</button>
+        </form>
+        <p class="program-selection__text">* — Обязательные поля</p>
+      </section>
     </main>
 
     <footer class="page-footer">
+      <section class="collaboration">
+        <h2 class="collaboration__title">Приглашаем к сотрудничеству дилеров!</h2>
+        <p class="collaboration__text">ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</p>
+
+        <div class="collaboration__map">
+          <div class="collaboration__iframe">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d434.9220421472803!2d30.322708079773165!3d59.93885712644913!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca5ba729%3A0xea9c53d4493c879f!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LCDQodCw0L3QutGCLdCf0LXRgtC10YDQsdGD0YDQsywgMTkxMTg2!5e0!3m2!1sru!2sru!4v1585510704332!5m2!1sru!2sru" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+          </div>
+          </div>
+      </section>
       <div class="page-footer__logo">
         <a href="index.html"><img src="https://via.placeholder.com/128x24" alt=""></a>
       </div>
