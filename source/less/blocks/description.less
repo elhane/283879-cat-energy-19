@@ -1,0 +1,77 @@
+.description {
+  margin-left: 20px;
+  margin-bottom: 40px;
+}
+
+.description__title {
+  font-family: @font-title;
+  font-weight: 400;
+  .set-font-size(36px, 60px);
+  color: @color-title;
+}
+
+.description__list {
+  list-style: none;
+  padding: 0;
+}
+
+.description__item {
+  padding-left: 80px;
+  margin-bottom: 23px;
+
+  .set-font-size(14px, 18px);
+}
+
+.description__item--leaf,
+.description__item--powder,
+.description__item--meal,
+.description__item--scales {
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 60px;
+    height: 60px;
+
+    background-color: @bc-green;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 4px;
+    left: 6px;
+
+    .set-image-size (45px, 45px);
+    background-repeat: no-repeat;
+    background-position: 0 0;
+  }
+}
+
+.description__item--leaf {
+  &::after {
+    background-image: url("../img/advantage-leaf@1x.png");
+  }
+}
+
+.description__item--powder {
+  &::after {
+    background-image: url("../img/advantage-powder@1x.png");
+  }
+}
+
+.description__item--meal {
+  &::after {
+    background-image: url("../img/advantage-dining@1x.png");
+  }
+}
+
+.description__item--scales {
+  &::after {
+    background-image: url("../img/advantage-clock@1x.png");
+  }
+}
