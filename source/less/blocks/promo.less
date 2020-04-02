@@ -1,0 +1,50 @@
+.promo {
+  position: relative;
+  margin-bottom: 23px;
+
+  font-family: @font-title;
+  line-height: 36px;
+  font-weight: 400;
+  text-align: center;
+  color: @color-white;
+  width: @mobile-width;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: -1;
+
+    height: 305px;
+    background-color: @bc-green;
+    background-image: url("../img/index-background-mobile@1x.jpg");
+    background-position: top center;
+    background-repeat: no-repeat;
+  }
+}
+
+.promo__title {
+  padding-top: 50px;
+  .set-font-size (36px, 36px);
+  font-weight: 400;
+}
+
+.promo__slogan {
+  text-transform: uppercase;
+  .set-font-size (14px, 14px);
+}
+
+.promo__image {
+  position: relative;
+
+  width: 280px;
+  height: 270px;
+
+  z-index: 1;
+}
+
+.promo__button {
+  width: 87%;
+}
