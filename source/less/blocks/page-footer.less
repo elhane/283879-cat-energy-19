@@ -9,9 +9,25 @@
 }
 
 .page-footer__copyright {
-  margin-left: 20px;
-  margin-right: 20px;
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+
+@media (min-width: @tablet-width) {
+  .page-footer {
+    width: @tablet-width;
+  }
+
+  .page-footer__wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .page-footer {
+    width: @desktop-width;
+  }
 }

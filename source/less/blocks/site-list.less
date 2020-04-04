@@ -7,9 +7,31 @@
   font-family: @font-title;
   .set-font-size (20px, 20px);
   font-weight: 500;
-  text-transform: uppercase;
+  .set-uppercase();
   text-align: center;
 
   padding-top: 20px;
   padding-bottom: 20px;
+}
+
+@media (min-width: @tablet-width) {
+  .site-list__item {
+    margin-left: 35px;
+  }
+
+  .site-list__link {
+    .set-font-size (18px, 25px);
+    font-weight: 400;
+  }
+}
+
+
+@media (min-width: @desktop-width) {
+  .site-list__link {
+    .set-font-size (20px, 25px);
+  }
+
+  .site-list__link--index {
+    color: @color-white;
+  }
 }

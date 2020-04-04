@@ -6,4 +6,25 @@
   .set-font-size (36px, 60px);
   font-weight: 400;
   color: @color-title;
+
+  @media (min-width: @tablet-width) {
+    .set-font-size (60px, 60px);
+    margin-top: 30px;
+    margin-bottom: 80px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-left: 110px;
+    margin-top: 30px;
+    margin-bottom: 80px;
+  }
+}
+
+.page-main__text {
+  margin-left: 20px;
+  margin-bottom: 30px;
+  font-family: @font-title;
+  font-weight: 400;
+  .set-font-size (14px, 18px);
+  .set-uppercase();
 }

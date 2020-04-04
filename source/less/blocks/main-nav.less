@@ -10,7 +10,21 @@
 }
 
 .main-nav__list {
+  display: flex;
+  flex-direction: column;
+
   list-style: none;
   margin: 0;
   padding: 0;
+}
+
+@media (min-width: @tablet-width) {
+  .main-nav__toggle {
+    display: none;
+  }
+
+  .main-nav__list {
+    display: flex;
+    flex-direction: row;
+  }
 }
