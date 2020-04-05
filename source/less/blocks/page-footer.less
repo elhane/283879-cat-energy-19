@@ -1,5 +1,4 @@
 .page-footer {
-  width: @mobile-width;
   padding-bottom: 20px;
   background-color: @bc-gray;
 }
@@ -16,18 +15,12 @@
 
 @media (min-width: @tablet-width) {
   .page-footer {
-    width: @tablet-width;
+    min-width: @tablet-width;
   }
 
   .page-footer__wrapper {
     display: flex;
     justify-content: space-between;
     align-items: center;
-  }
-}
-
-@media (min-width: @desktop-width) {
-  .page-footer {
-    width: @desktop-width;
   }
 }

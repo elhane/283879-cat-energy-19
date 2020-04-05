@@ -18,6 +18,18 @@
   padding: 0;
 }
 
+@media (min-width: @mobile-width) {
+  .main-nav {
+    display: none;
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .main-nav {
+    display: block;
+  }
+}
+
 @media (min-width: @tablet-width) {
   .main-nav__toggle {
     display: none;
