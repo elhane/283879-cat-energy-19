@@ -1,12 +1,21 @@
 .program__title {
   position: relative;
-  padding-left: 72px;
-
   font-family: @font-title;
   .set-font-size(24px, 37px);
-  text-transform: uppercase;
+  .set-uppercase();
   font-weight: 400;
   color: @color-title;
+  padding-left: 72px;
+
+  @media (min-width: @tablet-width) {
+    .set-font-size(36px, 37px);
+    padding-left: 0;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-left: 157px;
+    margin-bottom: 70px;
+  }
 
   &::before {
     content: "";
@@ -19,6 +28,22 @@
 
     background-color: @bc-green;
     border-radius: 50%;
+
+    @media (min-width: @tablet-width) {
+      left: 100%;
+      top: 0%;
+
+      width: 200px;
+      height: 200px;
+    }
+
+    @media (min-width: @desktop-width) {
+      left: -3px;
+      top: -33px;
+
+      width: 100px;
+      height: 100px;
+    }
   }
 }
 
@@ -32,6 +57,20 @@
     .set-image-size (35px, 49px);
     background-image: url("../img/icon-cat-slim.svg");
     background-repeat: no-repeat;
+
+    @media (min-width: @tablet-width) {
+      top: -31%;
+      left: 106%;
+
+      .set-image-size (141px, 194px);
+    }
+
+    @media (min-width: @desktop-width) {
+      top: -37px;
+      left: 14px;
+
+      .set-image-size (71px, 97px);
+    }
   }
 }
 
@@ -45,17 +84,41 @@
     .set-image-size (67px, 28px);
     background-image: url("../img/icon-cat-pro.svg");
     background-repeat: no-repeat;
+
+    @media (min-width: @tablet-width) {
+      top: 118%;
+      left: 93%;
+
+      .set-image-size (268px, 113px);
+    }
+
+    @media (min-width: @desktop-width) {
+      top: -7px;
+      left: -23px;
+
+      .set-image-size (134px, 57px);
+    }
+  }
+}
+
+
+.program__link {
+  font-family: @font-title;
+  text-decoration: none;
+  .set-uppercase();
+  .set-font-size(16px, 16px);
+  color: @color-title;
+
+  @media (min-width: @tablet-width) {
+    .set-font-size(20px, 20px);
   }
 }
 
 .program__text {
   .set-font-size(14px, 18px);
-}
 
-.program__link {
-  font-family: @font-title;
-  text-decoration: none;
-  text-transform: uppercase;
-  .set-font-size(16px, 16px);
-  color: @color-title;
+  @media (min-width: @tablet-width) {
+    .set-font-size(16px, 24px);
+    margin-bottom: 48px;
+  }
 }

@@ -1,12 +1,24 @@
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
 
 body {
-  margin: 0;
-  width: @mobile-width;
-
+  margin: 0 auto;
   font-family: @font-main;
-  @set-font-size (14px, 18px);
+  .set-font-size(14px, 18px);
   color: @color-text;
   background-color: @bc-white;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
 }
 
 .visually-hidden {
