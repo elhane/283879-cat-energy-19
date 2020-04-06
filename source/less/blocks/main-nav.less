@@ -7,36 +7,29 @@
 
   background-image: url("../img/icon-mobile-menu.svg");
   background-repeat: no-repeat;
+
+  @media (min-width: @tablet-width) {
+    display: none;
+  }
 }
 
 .main-nav__list {
   display: flex;
   flex-direction: column;
 
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
+  .list-reset();
 
-@media (min-width: @mobile-width) {
-  .main-nav {
-    display: none;
-  }
-}
-
-@media (min-width: @tablet-width) {
-  .main-nav {
-    display: block;
-  }
-}
-
-@media (min-width: @tablet-width) {
-  .main-nav__toggle {
-    display: none;
-  }
-
-  .main-nav__list {
-    display: flex;
+  @media (min-width: @tablet-width) {
     flex-direction: row;
+  }
+}
+
+.main-nav {
+  @media (max-width: @only-mobile-width) {
+    display: none;
+  }
+
+  @media (min-width: @tablet-width) {
+    display: block;
   }
 }

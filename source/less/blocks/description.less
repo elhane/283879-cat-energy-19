@@ -14,22 +14,30 @@
 }
 
 .description__list {
-  list-style: none;
-  padding: 0;
+  .list-reset();
+  display: flex;
+  flex-direction: column;
 
   @media (min-width: @tablet-width) {
-    display: flex;
     flex-wrap: wrap;
     flex-direction: row;
     justify-content: space-between;
   }
 }
 
+.description__text {
+  margin: 0;
+
+  @media (min-width: @tablet-width) {
+    margin-top: 15px;
+  }
+}
+
 .description__item {
   position: relative;
   padding-left: 80px;
-  margin-bottom: 23px;
-
+  margin-bottom: 20px;
+  min-height: 70px;
   .set-font-size(14px, 18px);
 
   @media (min-width: @tablet-width) {
@@ -81,44 +89,52 @@
   }
 }
 
-.description__item--leaf::after {
-  background-image: url("../img/advantage-leaf@1x.png");
-}
-
-.description__item--powder::after {
-  background-image: url("../img/advantage-powder@1x.png");
-}
-
-.description__item--meal::after {
-  background-image: url("../img/advantage-dining@1x.png");
-}
-
-.description__item--scales::after {
-  background-image: url("../img/advantage-clock@1x.png");
-}
-
-@media (min-width: @tablet-width) {
-  .description__item--leaf,
-  .description__item--powder,
-  .description__item--meal,
-  .description__item--scales {
+.description__item--leaf,
+.description__item--powder,
+.description__item--meal,
+.description__item--scales {
+  @media (min-width: @tablet-width) {
     background-repeat: no-repeat;
     background-position: 120px 0;
   }
+}
 
-  .description__item--leaf {
+.description__item--leaf {
+  &::after {
+    background-image: url("../img/advantage-leaf@1x.png");
+  }
+
+  @media (min-width: @tablet-width) {
     background-image: url("../img/1.png");
   }
+}
 
-  .description__item--powder {
+.description__item--powder {
+  &::after {
+    background-image: url("../img/advantage-powder@1x.png");
+  }
+
+  @media (min-width: @tablet-width) {
     background-image: url("../img/2.png");
   }
+}
 
-  .description__item--meal {
-    background-image: url("../img/3.png");
+.description__item--meal {
+  &::after {
+    background-image: url("../img/advantage-dining@1x.png");
   }
 
-  .description__item--scales {
+  @media (min-width: @tablet-width) {
+    background-image: url("../img/3.png");
+  }
+}
+
+.description__item--scales {
+  &::after {
+    background-image: url("../img/advantage-clock@1x.png");
+  }
+
+  @media (min-width: @tablet-width) {
     background-image: url("../img/4.png");
   }
 }

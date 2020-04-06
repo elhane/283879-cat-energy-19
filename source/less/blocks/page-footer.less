@@ -3,6 +3,14 @@
   background-color: @bc-gray;
 }
 
+.page-footer__wrapper {
+  @media (min-width: @tablet-width) {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
 .page-footer__logo {
   text-align: center;
 }
@@ -11,16 +19,4 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-}
-
-@media (min-width: @tablet-width) {
-  .page-footer {
-    min-width: @tablet-width;
-  }
-
-  .page-footer__wrapper {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
 }
