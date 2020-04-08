@@ -170,15 +170,15 @@
               <div class="catalog-item__description">
                 <h3 class="catalog-item__title">Cat Energy Slim 1000 г</h3>
                 <table class="catalog-item__options">
-                  <tr>
+                  <tr class="catalog-item__option-row">
                     <td class="catalog-item__option-left">Объем</td>
                     <td class="catalog-item__option-right">1000 г</td>
                   </tr>
-                  <tr>
+                  <tr class="catalog-item__option-row">
                     <td class="catalog-item__option-left">Вкус</td>
                     <td class="catalog-item__option-right">Гречка</td>
                   </tr>
-                  <tr>
+                  <tr class="catalog-item__option-row">
                     <td class="catalog-item__option-left">Цена</td>
                     <td class="catalog-item__option-right">700 Р.</td>
                   </tr>
@@ -224,55 +224,73 @@
       </section>
 
       <section class="extra-catalog">
+
         <h2 class="extra-catalog__title">Дополнительные товары</h2>
+
+        <div class="extra-catalog__wrapper">
         <ul class="extra-catalog__list">
           <li class="extra-catalog__item extra-product">
-            <h3 class="extra-product__title">Сахарозаменитель</h3>
-            <table class="extra-product__options">
-              <tr>
-                <td>1 упаковка (100 г)</td>
-                <td>200 Р.</td>
-              </tr>
-            </table>
+          <div class="extra-catalog__row">
+            <div class="extra-catalog__wrapper-description">
+              <h3 class="extra-product__title">Сахарозаменитель</h3>
+              <table class="extra-product__options">
+                <tr>
+                  <td class="extra-product__options--amount">1 упаковка (100 г)</td>
+                  <td class="extra-product__options--cost">200 Р.</td>
+                </tr>
+              </table>
+            </div>
             <a class="extra-catalog__button button" href="#">Заказать</a>
+          </div>
           </li>
 
           <li class="extra-catalog__item extra-product">
-            <h3 class="extra-product__title">Питьевая вода</h3>
-            <table class="extra-product__options">
-              <tr>
-                <td>5 литров</td>
-                <td>50 Р.</td>
-              </tr>
-            </table>
-            <a class="extra-catalog__button button" href="#">Заказать</a>
+            <div class="extra-catalog__row">
+              <div class="extra-catalog__wrapper-description">
+                <h3 class="extra-product__title">Питьевая вода</h3>
+                <table class="extra-product__options">
+                  <tr>
+                    <td class="extra-product__options--amount">5 литров</td>
+                    <td class="extra-product__options--cost">50 Р.</td>
+                  </tr>
+                </table>
+              </div>
+              <a class="extra-catalog__button button" href="#">Заказать</a>
+            </div>
           </li>
 
           <li class="extra-catalog__item extra-product">
-            <h3 class="extra-product__title">Молоко</h3>
-            <table class="extra-product__options">
-              <tr>
-                <td>1 литр</td>
-                <td>100 Р.</td>
-              </tr>
-            </table>
-            <a class="extra-catalog__button button" href="#">Заказать</a>
+            <div class="extra-catalog__row">
+              <div class="extra-catalog__wrapper-description">
+                <h3 class="extra-product__title">Молоко</h3>
+                <table class="extra-product__options">
+                  <tr>
+                    <td class="extra-product__options--amount">1 литр</td>
+                    <td class="extra-product__options--cost">100 Р.</td>
+                  </tr>
+                </table>
+              </div>
+              <a class="extra-catalog__button button" href="#">Заказать</a>
+            </div>
           </li>
 
           <li class="extra-catalog__item extra-product">
-            <h3 class="extra-product__title">Витамины</h3>
-            <table class="extra-product__options">
-              <tr>
-                <td>1 упаковка (30 г)</td>
-                <td>300 Р.</td>
-              </tr>
-            </table>
-            <a class="extra-catalog__button button" href="#">Заказать</a>
+            <div class="extra-catalog__row">
+              <div class="extra-catalog__wrapper-description">
+                <h3 class="extra-product__title">Витамины</h3>
+                <table class="extra-product__options">
+                  <tr>
+                    <td class="extra-product__options--amount">1 упаковка (30 г)</td>
+                    <td class="extra-product__options--cost">300 Р.</td>
+                  </tr>
+                </table>
+              </div>
+              <a class="extra-catalog__button button" href="#">Заказать</a>
+            </div>
           </li>
         </ul>
-      </section>
 
-      <section class="present">
+        <div class="present">
         <h2 class="visually-hidden">Чехол в подарок!</h2>
         <svg class="present__image" fill="ffffff" width="56" height="61" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewbox="0 0 55.5 60" style="enable-background: new 0 0 55.5 60;" xml:space="preserve">
           <path
@@ -286,22 +304,35 @@
             c0,0,0,0,0,0s0,0,0,0H27.7c0,0,0,0,0,0s0,0,0,0H5.2c0,0,0,0,0,0s0,0,0,0h-2c-0.4,0-0.7-0.3-0.7-0.7v-9.4c0-0.4,0.3-0.7,0.7-0.7h49.2
             c0.4,0,0.7,0.3,0.7,0.7V24.7z"/>
         </svg>
-        <p class="present__text">Закажите все и получите чехол для кота в подарок!</p>
+        <p class="present__text">Закажите все и&nbsp;получите чехол для кота в подарок!</p>
+      </div>
+
+    </div>
       </section>
+
+
+
     </main>
 
     <footer class="page-footer">
-      <section class="collaboration collaboration--index">
-        <div class="collaboration__contacts container">
-          <h2 class="collaboration__title">Приглашаем к сотрудничеству дилеров!</h2>
-          <p class="collaboration__text">ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</p>
+      <section class="collaboration">
+        <div class="container">
+          <div class="collaboration__contacts">
+            <h2 class="collaboration__title">Приглашаем к&nbsp;сотрудничеству дилеров!</h2>
+            <div class="collaboration__address">
+              <p class="collaboration__street">ул. Большая Конюшенная,&nbsp;д.&nbsp;19/8</p>
+              <p class="collaboration__city">Санкт-Петербург</p>
+            </div>
+          </div>
         </div>
+
         <div class="collaboration__map">
           <div class="collaboration__iframe">
-            <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d434.9220421472803!2d30.322708079773165!3d59.93885712644913!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca5ba729%3A0xea9c53d4493c879f!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LCDQodCw0L3QutGCLdCf0LXRgtC10YDQsdGD0YDQsywgMTkxMTg2!5e0!3m2!1sru!2sru!4v1585510704332!5m2!1sru!2sru" width="100%" height="364" frameborder="0" style="border: 0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d994.9750205566963!2d30.322076840808084!3d59.938765264719976!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca5ba729%3A0xea9c53d4493c879f!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LCDQodCw0L3QutGCLdCf0LXRgtC10YDQsdGD0YDQsywgMTkxMTg2!5e0!3m2!1sru!2sru!4v1586253181213!5m2!1sru!2sru" width="100%" height="400" frameborder="0" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
           </div>
         </div>
       </section>
+
       <div class="page-footer__wrapper container">
         <div class="page-footer__logo">
           <a class="page-footer_link" href="index.html"><img src="img/logo-footer.svg" width="128" height="24" alt=""></a>

@@ -8,6 +8,7 @@
 
   @media (min-width: @tablet-width) {
     .set-font-size (60px, 60px);
+    padding-left: 20px;
     margin-top: 30px;
     margin-bottom: 80px;
   }
@@ -24,4 +25,16 @@
   font-weight: 400;
   .set-font-size (14px, 18px);
   .set-uppercase();
+
+  @media (min-width: @tablet-width) {
+    padding-left: 30px;
+    margin-bottom: 60px;
+    width: 50%;
+    .set-font-size(20px, 30px);
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 34%;
+    .set-font-size(20px, 30px);
+  }
 }
