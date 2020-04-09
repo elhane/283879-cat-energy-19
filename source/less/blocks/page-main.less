@@ -24,4 +24,16 @@
   font-weight: 400;
   .set-font-size (14px, 18px);
   .set-uppercase();
+
+  @media (min-width: @tablet-width) {
+    padding-left: 20px;
+    margin-bottom: 60px;
+    width: 50%;
+    .set-font-size(20px, 30px);
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 30%;
+    .set-font-size(20px, 30px);
+  }
 }

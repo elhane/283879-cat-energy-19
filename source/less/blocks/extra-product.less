@@ -6,6 +6,15 @@
   font-weight: 400;
   text-transform: uppercase;
   color: @color-title-extra;
+
+  @media (min-width: @tablet-width) {
+    .set-font-size (20px, 20px);
+  }
+
+  @media (min-width: @desktop-width) {
+    white-space: nowrap;
+    margin: 0;
+  }
 }
 
 .extra-product__options {
@@ -13,4 +22,30 @@
   margin-bottom: 12px;
   .set-font-size (14px, 14px);
   color: @color-text;
+  width: 100%;
+
+  @media (min-width: @tablet-width) {
+    width: 40%;
+    .set-font-size (16px, 20px);
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 50%;
+    margin: 0;
+  }
+}
+
+.extra-product__options--cost {
+  text-align: right;
+  width: 90px;
+}
+
+.extra-product__options--amount {
+  @media (min-width: @tablet-width) {
+    text-align: right;
+  }
+
+  @media (min-width: @desktop-width) {
+    text-align: left;
+  }
 }
