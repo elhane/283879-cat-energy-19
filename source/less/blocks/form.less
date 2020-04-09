@@ -8,7 +8,6 @@
   color: @color-title-extra;
 
   @media (min-width: @tablet-width) {
-    padding-right: 30px;
     margin-bottom: 70px;
     .set-font-size(20px, 20px);
   }
@@ -186,31 +185,36 @@
 .form__legend {
   position: relative;
   z-index: 1;
-
-  max-width: 205px;
-  padding: 0;
   padding-right: 20px;
-  margin-bottom: 25px;
-
   .set-font-size(24px, 24px);
+  font-weight: 400;
   text-transform: none;
   background-color: @bc-white;
 
   @media (min-width: @tablet-width) {
     padding-left: 30px;
+    padding-right: 30px;
     margin-bottom: 70px;
     max-width: 80%;
     .set-font-size(36px, 36px);
   }
-
-  // @media (min-width: @desktop-width) {
-
-  // }
 }
 
 .form__legend--additional {
+  width: 166px;
+
   @media (min-width: @tablet-width) {
     margin-bottom: 55px;
+    width: 280px;
+  }
+}
+
+.form__legend--information-owner {
+  width: 205px;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 55px;
+    width: 338px;
   }
 }
 

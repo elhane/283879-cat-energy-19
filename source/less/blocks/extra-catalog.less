@@ -60,8 +60,21 @@
   color: @color-title;
 
   @media (min-width: @tablet-width) {
-    .set-font-size (36px, 36px);
+    position: relative;
+    z-index: 2;
     margin-bottom: 70px;
+    padding-left: 40px;
+    padding-right: 30px;
+    width: 59%;
+
+    .set-font-size (36px, 36px);
+    background-color: @bc-white;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-left: 30px;
+    margin-left: -30px;
+    width: 33%;
   }
 }
 
@@ -98,5 +111,33 @@
 .extra-catalog__button {
   @media (min-width: @desktop-width) {
     min-width: 245px;
+  }
+}
+
+.extra-catalog__header-line {
+  position: relative;
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 10px;
+    right: 0;
+
+    height: 3px;
+    width: 70%;
+    background-color: @bc-green;
+  }
+
+  @media (min-width: @tablet-width) {
+    &::after {
+      content: "";
+      position: absolute;
+      top: 17px;
+      left: 0;
+
+      height: 3px;
+      width: 100%;
+      background-color: @bc-green;
+    }
   }
 }
