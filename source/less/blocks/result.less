@@ -1,18 +1,28 @@
 .result {
+  position: relative;
   padding-top: 20px;
-  padding-bottom: 30px;
   background-color: @bc-gray;
 
   @media (min-width: @tablet-width) {
-    position: relative;
-    z-index: 1;
-
-    margin-bottom: 25px;
+    padding-bottom: 0;
     background-color: @bc-white;
+
+    &::before {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+
+      height: 462px;
+      width: 100%;
+      background-image: linear-gradient(to right, @bc-gray 60%, #eaeaea 50%);
+    }
   }
 
   @media (min-width: @desktop-width) {
-    padding-bottom: 0;
+    &::before {
+      background-image: linear-gradient(to right, @bc-gray 71.5%, #eaeaea 50%);
+    }
   }
 }
 
@@ -26,8 +36,6 @@
     flex-wrap: nowrap;
     align-items: center;
     justify-content: space-between;
-
-    margin-bottom: 45px;
   }
 
   @media (min-width: @desktop-width) {
@@ -45,6 +53,7 @@
   color: @color-title;
 
   @media (min-width: @tablet-width) {
+    margin-bottom: 60px;
     .set-font-size(60px, 60px);
   }
 
@@ -167,6 +176,7 @@
 .result__image {
   display: block;
   margin-bottom: 30px;
+  // z-index: 2;
 
   @media (min-width: @tablet-width) {
     margin: 0 auto;
@@ -182,6 +192,8 @@
   display: flex;
   justify-content: center;
   align-items: center;
+
+  padding-bottom: 60px;
 }
 
 .result__bar {
@@ -215,7 +227,7 @@
 
   @media (min-width: @tablet-width) {
     position: absolute;
-    left: 46%;
+    left: 50%;
     top: -14px;
 
     width: 34px;
@@ -241,29 +253,31 @@
   }
 }
 
-.result__background {
-  @media (min-width: @tablet-width) {
-    content: "";
-    position: absolute;
-    top: 466px;
-    left: 0;
-    z-index: -1;
-
-    height: 462px;
-    width: 100%;
-    background-image: linear-gradient(to right, @bc-gray 50%, #eaeaea 50%);
-  }
-
-  @media (min-width: @desktop-width) {
-    top: 195px;
-    background-image: linear-gradient(to right, @bc-gray 70%, #eaeaea 50%);
-  }
-}
-
-
 .result__row {
+  position: relative;
+
+  @media (min-width: @tablet-width) {
+    z-index: 1;
+
+    &::before {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      z-index: -1;
+
+      height: 462px;
+      width: 100%;
+      background-image: linear-gradient(to right, @bc-gray 52%, #eaeaea 50%);
+    }
+  }
+
   @media (min-width: @desktop-width) {
     display: flex;
+
+    &::before {
+      background-image: linear-gradient(to right, @bc-gray 76.1%, #eaeaea 50%);
+    }
   }
 }
 

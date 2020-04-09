@@ -35,15 +35,19 @@
     </div>
     </header>
 
-    <main class="page-main container">
-      <h1 class="page-main__title">Подбор программы</h1>
-      <p class="page-main__text">Заполните анкету и мы подберем программу питания для вашего кота</p>
+    <main class="page-main">
+
+      <div class="container">
+        <h1 class="page-main__title">Подбор программы</h1>
+        <p class="page-main__text">Заполните анкету и мы подберем программу питания для вашего кота</p>
+      </div>
 
       <section class="program-selection">
         <h2 class="visually-hidden">Форма для подбора программы питания вашего кота</h2>
 
         <form class="program-selection__form form" action="https://echo.htmlacademy.ru/courses" method="post">
-          <div class="form__wrapper-information-cat">
+
+          <div class="form__wrapper-information-cat form__container-wrapper">
             <fieldset class="form__fieldset form__fieldset--information">
               <legend class="visually-hidden">Данные кота</legend>
               <div class="form__row">
@@ -78,9 +82,13 @@
           </div>
 
           <fieldset class="form__fieldset">
-            <legend class="form__legend">Контактные данные (владельца кота)</legend>
+            <div class="form__header-line">
+              <div class="container">
+                <legend class="form__legend">Контактные данные (владельца кота)</legend>
+              </div>
+            </div>
 
-            <div class="form__wrapper-information-owner">
+            <div class="form__wrapper-information-owner form__container-wrapper">
               <div class="form__row form__row--email">
                 <label class="form__label" for="email">E-mail:*</label>
                 <input class="form__input-field form__input-field--email-icon" type="email" id="email" name="email" placeholder="kuklachev@gmail.com"/>
@@ -93,13 +101,25 @@
             </fieldset>
 
           <fieldset class="form__fieldset form__fieldset--commentary">
-            <label class="form__legend" for="comment">Комментарий</label>
-            <textarea class="form__textarea" name="comment" id="comment" cols="30" rows="10" placeholder="Расскажите обо всех повадках кота"></textarea>
+            <div class="form__header-line">
+              <div class="container">
+                <label class="form__legend" for="comment">Комментарий</label>
+              </div>
+            </div>
+
+              <div class="form__container-wrapper">
+                <textarea class="form__textarea" name="comment" id="comment" cols="30" rows="10" placeholder="Расскажите обо всех повадках кота"></textarea>
+              </div>
           </fieldset>
 
           <fieldset class="form__fieldset form__fieldset--additional">
-            <legend class="form__legend form__legend--additional">Дополнительно</legend>
-            <div class="form__wrapper-additional">
+            <div class="form__header-line">
+              <div class="container">
+                <legend class="form__legend form__legend--additional">Дополнительно</legend>
+              </div>
+            </div>
+
+            <div class="form__wrapper-additional form__container-wrapper">
               <div class="form__row form__row--additional">
                 <input class="form__input-checkbox" type="checkbox" name="sweetener" id="sweetener" checked/>
                 <label class="form__label" for="sweetener">Сахарозаменитель</label>
@@ -112,6 +132,7 @@
                 <input class="form__input-checkbox" type="checkbox" name="milk" id="milk"/>
                 <label class="form__label" for="milk">Молоко</label>
               </div>
+
               <div class="form__row form__row--additional">
                 <input class="form__input-checkbox" type="checkbox" name="vitamins" id="vitamins"/>
                 <label class="form__label" for="vitamins">Витамины</label>
@@ -119,7 +140,7 @@
             </div>
           </fieldset>
 
-          <div class="form__button-wrapper">
+          <div class="form__button-wrapper form__container-wrapper">
             <button class="form__button button" type="submit">Отправить заявку</button>
             <p class="form__text">* — Обязательные поля</p>
           </div>

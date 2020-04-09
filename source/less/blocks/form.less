@@ -8,7 +8,6 @@
   color: @color-title-extra;
 
   @media (min-width: @tablet-width) {
-    padding-left: 30px;
     padding-right: 30px;
     margin-bottom: 70px;
     .set-font-size(20px, 20px);
@@ -20,7 +19,7 @@
     display: flex;
     justify-content: space-between;
     padding: 0;
-    margin-bottom: 60px;
+    padding-bottom: 60px;
     width: 100%;
   }
 }
@@ -67,7 +66,6 @@
     padding-top: 30px;
     padding-left: 25px;
 
-    // height: 176px; //пока так, min-height не рабоатает
     width: 46%;
     height: 100%;
   }
@@ -157,28 +155,52 @@
   color: @color-text;
 }
 
+.form__header-line {
+  position: relative;
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 10px;
+    right: 0;
+
+    height: 3px;
+    width: 70%;
+    background-color: @bc-green;
+  }
+
+  @media (min-width: @tablet-width) {
+    &::after {
+      content: "";
+      position: absolute;
+      top: 17px;
+      left: 0;
+
+      height: 3px;
+      width: 100%;
+      background-color: @bc-green;
+    }
+  }
+}
+
 .form__legend {
   position: relative;
+  z-index: 1;
+
+  max-width: 205px;
+  padding: 0;
+  padding-right: 20px;
   margin-bottom: 25px;
+
   .set-font-size(24px, 24px);
   text-transform: none;
   background-color: @bc-white;
 
-  // &::after {
-  //   content: "";
-  //   position: absolute;
-  //   top: 50%;
-  //   left: -50%;
-  //   z-index: -1;
-
-  //   height: 3px;
-  //   width: 100%;
-  //   background-color: @bc-green;
-  // }
-
   @media (min-width: @tablet-width) {
-    .set-font-size(36px, 36px);
+    padding-left: 30px;
     margin-bottom: 70px;
+    max-width: 80%;
+    .set-font-size(36px, 36px);
   }
 
   // @media (min-width: @desktop-width) {
@@ -232,8 +254,30 @@
   font-family: @font-main;
   .set-font-size(15px, 16px);
   text-transform: none;
+  text-align: center;
 
   @media (min-width: @tablet-width) {
     padding-left: 60px;
+  }
+}
+
+.form__container-wrapper {
+  width: 320px;
+  margin: 0 auto;
+  padding-left: 20px;
+  padding-right: 20px;
+
+  @media (min-width: @tablet-width) {
+    width: @tablet-width;
+    margin: 0 auto;
+    padding-left: 60px;
+    padding-right: 60px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: @desktop-width;
+    margin: 0 auto;
+    padding-left: 70px;
+    padding-right: 70px;
   }
 }
