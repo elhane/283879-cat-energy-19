@@ -1,6 +1,6 @@
 .page-main__title {
-  margin: 0;
-  margin-bottom: 35px;
+  margin-top: 16px;
+  margin-bottom: 29px;
   font-family: @font-title;
   .set-font-size (36px, 60px);
   font-weight: 400;
@@ -8,31 +8,36 @@
 
   @media (min-width: @tablet-width) {
     .set-font-size (60px, 60px);
-    margin-top: 30px;
-    margin-bottom: 80px;
+    margin-top: 41px;
   }
 
   @media (min-width: @desktop-width) {
-    margin-top: 30px;
+    margin-top: 60px;
     margin-bottom: 80px;
   }
 }
 
 .page-main__text {
-  margin-bottom: 30px;
+  margin-bottom: 35px;
   font-family: @font-title;
   font-weight: 400;
   .set-font-size (14px, 18px);
   .set-uppercase();
 
+  @media (max-width: @only-mobile-width) {
+    margin-top: -5px;
+  }
+
   @media (min-width: @tablet-width) {
-    padding-left: 20px;
+    padding-left: 42px;
+    margin-top: 56px;
     margin-bottom: 60px;
-    width: 50%;
     .set-font-size(20px, 30px);
   }
 
   @media (min-width: @desktop-width) {
+    margin-top: -26px;
+    padding-left: 0;
     width: 30%;
     .set-font-size(20px, 30px);
   }
