@@ -4,7 +4,7 @@
   line-height: 36px;
   font-weight: 400;
   text-align: center;
-  margin-bottom: 24px;
+  margin-bottom: 23px;
   color: @color-white;
 
   &::before {
@@ -26,7 +26,8 @@
   }
 
   @media (min-width: @tablet-width) {
-    min-height: 800px;
+    padding-top: 13px;
+    min-height: 830px;
     color: @color-title;
 
     &::before {
@@ -36,7 +37,7 @@
     &::after {
       content: "";
       position: absolute;
-      top: 208px;
+      top: 242px;
       left: 0;
       right: 0;
       z-index: -1;
@@ -51,6 +52,7 @@
   }
 
   @media (min-width: @desktop-width) {
+    padding-top: 64px;
     min-height: 500px;
 
     &::before {
@@ -64,6 +66,8 @@
 }
 
 .promo__image {
+  margin-bottom: -8px;
+
   @media (min-width: @tablet-width) {
     display: none;
   }
@@ -71,28 +75,28 @@
 
 .promo__title {
   margin-top: 0;
+  margin-bottom: 24px;
   padding-top: 29px;
   .set-font-size (36px, 36px);
   font-weight: 400;
 
   @media (min-width: @tablet-width) {
-    margin-right: 230px;
-    margin-left: 60px;
+    margin-left: 86px;
+    margin-bottom: 41px;
     .set-font-size (60px, 60px);
     text-align: left;
   }
 
   @media (min-width: @desktop-width) {
     position: relative;
-    width: 450px;
-    margin-top: 70px;
     z-index: 2;
+    margin-left: 80px;
 
     &::after {
       content: "";
       position: absolute;
-      top: 0;
-      left: 393px;
+      top: -51px;
+      left: 371px;
       right: 0;
       z-index: 1;
 
@@ -107,15 +111,22 @@
 }
 
 .promo__slogan {
+  margin: 0;
+  margin-bottom: 28px;
   .set-uppercase();
   .set-font-size (14px, 14px);
 
   @media (min-width: @tablet-width) {
-    margin-left: 60px;
-    margin-bottom: 45px;
+    margin-left: 87px;
+    margin-bottom: 48px;
     .set-uppercase();
     .set-font-size (20px, 20px);
     text-align: left;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-left: 80px;
+    margin-bottom: 54px;
   }
 }
 
@@ -123,10 +134,15 @@
   .set-font-size (14px, 18px);
 
   @media (min-width: @tablet-width) {
-    .set-font-size (20px, 20px);
     padding-top: 15px;
     padding-bottom: 15px;
-    margin-left: 60px;
+    margin-left: 89px;
     width: 245px;
+    .set-font-size (20px, 20px);
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-left: 80px;
+    margin-bottom: 54px;
   }
 }

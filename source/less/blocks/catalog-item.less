@@ -3,7 +3,7 @@
   flex-direction: column;
   align-items: center;
 
-  padding-bottom: 25px;
+  padding-bottom: 24px;
   padding-right: 20px;
   padding-left: 20px;
   border: 1px solid @bc-gray-border;
@@ -18,14 +18,15 @@
   @media (min-width: @tablet-width) {
     padding-left: 38px;
     padding-right: 38px;
-    margin-bottom: 56px;
+    margin-bottom: 139px;
     width: 324px;
     background-color: @bc-gray;
     border: none;
   }
 
   @media (min-width: @desktop-width) {
-    margin-bottom: 100px;
+    margin-bottom: 142px;
+    padding-bottom: 14px;
     width: 245px;
   }
 }
@@ -44,16 +45,42 @@
 
 .catalog-item__image {
   display: block;
-  width: 100%;
   text-align: center;
+
+  @media (max-width: @only-mobile-width) {
+    width: 100%; //
+  }
+
+  @media (min-width: @tablet-width) {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    margin-top: -80px;
+    margin-right: -40px;
+    margin-left: -40px;
+    margin-bottom: 0;
+    min-height: 212px;
+  }
 }
 
 .catalog-item__button {
+  margin-top: -3px;
   width: 100%;
   .set-font-size (16px, 20px);
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 16px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-bottom: 24px;
+  }
 }
 
 .catalog-item__title {
+  margin-top: 22px;
+  margin-bottom: 11px;
+
   width: 64%;
   font-family: @font-title;
   .set-font-size (16px, 20px);
@@ -64,8 +91,15 @@
   @media (min-width: @tablet-width) {
     align-self: center;
     .set-font-size (20px, 20px);
-    white-space: pre-wrap;
     text-align: center;
+    margin-bottom: 19px;
+    margin-top: 32px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 93%;
   }
 }
 
@@ -73,10 +107,15 @@
   display: flex;
   flex-direction: column;
   width: 100%;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 3px;
+  }
 }
 
 .catalog-item__options {
-  .set-font-size (12px, 16px);
+  .set-font-size (12px, 13px);
+  width: 100%;
 
   @media (min-width: @tablet-width) {
     margin-bottom: 33px;
@@ -85,12 +124,20 @@
   }
 }
 
+.catalog-item__option-left,
+.catalog-item__option-right {
+  padding: 0;
+
+  @media (min-width: @tablet-width) {
+    padding-top: 8px;
+    padding-bottom: 7px;
+  }
+}
+
 .catalog-item__option-right {
   text-align: right;
 
   @media (min-width: @tablet-width) {
-    padding-top: 5px;
-    padding-bottom: 5px;
     border-bottom: 1px solid #cdcdcd;
   }
 }

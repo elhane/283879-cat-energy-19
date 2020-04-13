@@ -1,15 +1,12 @@
-.main-nav__toggle {
-  width: 24px;
-  height: 18px;
+.main-nav {
+  position: relative; //
 
-  background-color: transparent;
-  border: none;
-
-  background-image: url("../img/icon-mobile-menu.svg");
-  background-repeat: no-repeat;
+  @media (max-width: @only-mobile-width) {
+    width: 320px;
+  }
 
   @media (min-width: @tablet-width) {
-    display: none;
+    display: block;
   }
 }
 
@@ -22,14 +19,55 @@
   @media (min-width: @tablet-width) {
     flex-direction: row;
   }
+
+  @media (min-width: @desktop-width) {
+    padding-top: 3px;
+  }
 }
 
-.main-nav {
+
+.main-nav__toggle {
+  position: absolute;
+  top: -42px;
+  right: 2px;
+
+  width: 24px;
+  height: 18px;
+
+  background-color: @bc-white;
+  border: none;
+
+  display: block;
+  cursor: pointer;
+  background-image: url("../img/icon-mobile-menu.svg");
+  background-repeat: no-repeat;
+
+  @media (min-width: @tablet-width) {
+    display: none;
+  }
+}
+
+.main-nav--opened .main-nav__toggle {
+  width: 19px;
+  height: 19px;
+  background-image: url("../img/icon-close.svg");
+  background-repeat: no-repeat;
+}
+
+.main-nav--opened {
+  @media (max-width: @only-mobile-width) {
+    display: block;
+  }
+}
+
+.main-nav--closed .main-nav__list {
   @media (max-width: @only-mobile-width) {
     display: none;
   }
+}
 
-  @media (min-width: @tablet-width) {
-    display: block;
+.main-nav--nojs .main-nav__toggle {
+  @media (max-width: @only-mobile-width) {
+    display: none;
   }
 }

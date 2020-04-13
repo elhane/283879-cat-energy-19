@@ -1,16 +1,23 @@
 .extra-catalog {
   margin-bottom: 39px;
 
+  @media (min-width: @tablet-width) {
+    margin-bottom: 78px;
+    margin-top: -82px;
+  }
+
   @media (min-width: @desktop-width) {
-    margin-bottom: 0;
+    margin-bottom: 28px;
+    margin-top: -73px;
   }
 }
 
 .extra-catalog__list {
   .list-reset();
+  margin-bottom: 37px;
 
   @media (min-width: @tablet-width) {
-    margin-bottom: 60px;
+    margin-bottom: 71px;
   }
 
   @media (min-width: @desktop-width) {
@@ -19,13 +26,13 @@
     justify-content: space-between;
 
     margin-bottom: 60px;
-    width: 75%;
+    width: 73.3%;
   }
 }
 
 .extra-catalog__item {
-  padding-top: 25px;
-  padding-bottom: 30px;
+  padding-top: 12px;
+  padding-bottom: 18px;
   margin-top: -1px;
 
   border-top: 1px solid @bc-gray-border;
@@ -35,13 +42,15 @@
     border: 1px solid @bc-gray-border;
     padding-right: 38px;
     padding-left: 38px;
+    padding-top: 26px;
+    padding-bottom: 25px;
   }
 
   @media (min-width: @desktop-width) {
     display: flex;
     justify-content: space-between;
 
-    padding-top: 15px;
+    padding-top: 14px;
     padding-bottom: 17px;
     padding-left: 0;
     padding-right: 0;
@@ -54,17 +63,25 @@
 }
 
 .extra-catalog__title {
+  margin-bottom: 35px;
+  padding-right: 24px;
+  padding-left: 12px;
+  margin-left: -13px;
   font-family: @font-title;
   .set-font-size (24px, 24px);
   font-weight: 400;
   color: @color-title;
+  display: inline-block;
+  background-color: @bc-white;
 
   @media (min-width: @tablet-width) {
     position: relative;
     z-index: 2;
+    display: inline;
     margin-bottom: 70px;
-    padding-left: 40px;
-    padding-right: 30px;
+    margin-left: 0;
+    padding-left: 38px;
+    padding-right: 35px;
     width: 59%;
 
     .set-font-size (36px, 36px);
@@ -94,7 +111,8 @@
   @media (min-width: @desktop-width) {
     align-items: center;
     width: 100%;
-    padding-right: 40px;
+    padding-right: 0;
+    margin-right: 33px;
   }
 }
 
@@ -120,24 +138,20 @@
   &::after {
     content: "";
     position: absolute;
-    top: 10px;
-    right: 0;
+    top: 34px;
+    left: 0;
+    z-index: -1;
 
     height: 3px;
-    width: 70%;
+    width: 100%;
     background-color: @bc-green;
   }
 
   @media (min-width: @tablet-width) {
-    &::after {
-      content: "";
-      position: absolute;
-      top: 17px;
-      left: 0;
+    margin-bottom: 78px;
 
-      height: 3px;
-      width: 100%;
-      background-color: @bc-green;
+    &::after {
+      top: 21px;
     }
   }
 }
