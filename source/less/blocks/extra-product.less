@@ -26,7 +26,8 @@
   width: 100%;
 
   @media (min-width: @tablet-width) {
-    width: 40%;
+    margin-right: -6px;
+    width: 58%;
     .set-font-size (16px, 20px);
   }
 
@@ -34,21 +35,28 @@
     width: 50%;
     margin: 0;
     margin-bottom: -8px;
-    padding-left: 17px;
+    padding-left: 15px;
   }
 }
 
 .extra-product__options--cost {
   text-align: right;
-  width: 90px;
+  width: 46px;
+
+  @media (min-width: @desktop-width) {
+    width: 46px;
+    text-align: left;
+  }
 }
 
 .extra-product__options--amount {
   @media (min-width: @tablet-width) {
+    width: 74%;
     text-align: right;
   }
 
   @media (min-width: @desktop-width) {
+    width: 84%;
     text-align: left;
   }
 }
