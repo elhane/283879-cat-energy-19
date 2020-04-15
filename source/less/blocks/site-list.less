@@ -1,26 +1,26 @@
 .site-list__link {
+  position: relative;
   color: @color-title;
   text-decoration: none;
+  padding-bottom: 6px;
 
-  @media (min-width: @tablet-width) {
-    position: relative;
-    padding-top: 17px;
-    .set-font-size (18px, 25px);
-    font-weight: 400;
-    padding-bottom: 10px;
-
-    &--active::after {
-      content: "";
-      position: absolute;
-      bottom: 2px;
-      left: 0;
-      right: 0;
-      height: 2px;
-      background: @bc-green;
-      width: 100%;
-    }
+  &--active::after {
+    content: "";
+    position: absolute;
+    bottom: 2px;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background: @bc-green;
+    width: 100%;
   }
 
+  @media (min-width: @tablet-width) {
+    padding-top: 17px;
+    padding-bottom: 11px;
+    .set-font-size (18px, 25px);
+    font-weight: 400;
+  }
 
   @media (min-width: @desktop-width) {
     .set-font-size (20px, 25px);
@@ -53,8 +53,8 @@
 
   padding-top: 22px;
   padding-bottom: 23px;
-  margin-right: -20px;
-  margin-left: -20px;
+  // margin-right: -20px;
+  // margin-left: -20px;
 
   @media (max-width: @only-mobile-width) {
     border-top: 1px solid @bc-gray-border;
