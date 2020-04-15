@@ -107,10 +107,21 @@
             <div class="result__illustration-block">
               <div class="result__image-block">
                 <div class="result__image-wrapper">
-                  <div class="result__image result__image--before"></div>
-                  <div class="result__image result__image--after"></div>
+                  <div class="result__image result__image--before">
+                    <picture>
+                      <source media="(min-width: 1300px)" srcset="img/before-desktop@1x.png">
+                      <source media="(min-width: 768px)" srcset="img/before-tablet@1x.png">
+                      <img src="img/before-mobile@1x.png" alt="Кэт Энерджи">
+                    </picture>
+                  </div>
+                  <div class="result__image result__image--after">
+                    <picture>
+                      <source media="(min-width: 1300px)" srcset="img/after-desktop@1x.png">
+                      <source media="(min-width: 768px)" srcset="img/after-tablet@1x.png">
+                      <img src="img/after-mobile@1x.png" alt="Кэт Энерджи">
+                    </picture>
+                  </div>
                 </div>
-                <!-- <img class="result__image" src="img/before-mobile@1x.png" alt="" width="311" height="211"> -->
                 <div class="result__range-block">
                   <button class="result__button" type="button">Было</button>
                   <div class="result__bar">

@@ -16,7 +16,7 @@
 
       height: 462px;
       width: 100%;
-      background-image: linear-gradient(to right, @bc-gray 60%, #eaeaea 50%);
+      background-image: linear-gradient(to right, @bc-gray 50%, #eaeaea 50%);
     }
   }
 
@@ -24,7 +24,7 @@
     padding-bottom: 32px;
 
     &::before {
-      background-image: linear-gradient(to right, @bc-gray 71.5%, #eaeaea 50%);
+      background-image: linear-gradient(to right, @bc-gray calc(50% + 300px), #eaeaea calc(50% + 300px));
     }
   }
 }
@@ -83,7 +83,8 @@
   }
 
   @media (min-width: @desktop-width) {
-    padding-right: 129px;
+    // padding-right: 129px;
+    padding-right: 39px;
     margin-bottom: 68px;
   }
 }
@@ -200,16 +201,12 @@
 
   @media (min-width: @tablet-width) {
     margin: 0 auto;
-    // margin-left: 12px;
-    // margin-bottom: 18px;
     height: 518px;
     width: 100%;
   }
 
   @media (min-width: @desktop-width) {
-    // margin-top: -27px;
-    // margin-bottom: 38px;
-    width: 641px;
+    width: 690px;
     height: 518px;
   }
 }
@@ -230,7 +227,7 @@
 
       height: 462px;
       width: 100%;
-      background-image: linear-gradient(to right, #f2f2f2 48.7%, #eaeaea 20%);
+      background-image: linear-gradient(to right, #f2f2f2 48.7%, #eaeaea 48.7%);
     }
   }
 
@@ -239,7 +236,7 @@
 
     &::before {
       bottom: -120px;
-      background-image: linear-gradient(to right, @bc-gray 61%, #eaeaea 50%);
+      background-image: linear-gradient(to right, @bc-gray 50%, #eaeaea 50%);
     }
   }
 }
@@ -349,6 +346,8 @@
   @media (min-width: @desktop-width) {
     flex-direction: column;
     height: 100%;
+    //
+    width: 39%;
   }
 }
 
@@ -356,9 +355,11 @@
   margin-left: 16px;
 
   @media (min-width: @desktop-width) {
-    margin-left: auto;
-    margin-right: 52px;
-    margin-top: -25px;
+    margin-left: 0;
+    //
+    position: absolute;
+    right: -36px;
+    bottom: 88px;
   }
 }
 
@@ -366,45 +367,45 @@
   @media (min-width: @tablet-width) {
     position: relative;
     height: 531px;
+    width: 690px;
   }
 }
 
 .result__image--after {
   // background-image: url("../img/after-mobile@1x.png");
-  background-repeat: no-repeat;
+  // background-repeat: no-repeat;
 
   @media (min-width: @tablet-width) {
-    background-image: url("../img/after-tablet@1x.png");
+    // background-image: url("../img/after-tablet@1x.png");
   }
 
   @media (min-width: @desktop-width) {
-    background-image: url("../img/after-desktop@1x.png");
+    background-image: linear-gradient(to bottom, #ffffff 36.5%, #eaeaea 36.5%);
+    // background-image: url("../img/after-desktop@1x.png");
 
-    width: 600px;
-    height: 607px;
+    // width: 600px;
+    // height: 607px;
   }
 }
 
 .result__image--before {
   position: absolute;
-  margin-left: -36px;
-  background-image: url("../img/before-mobile@1x.png");
-  background-repeat: no-repeat;
+  // margin-left: -36px;
+  // background-image: url("../img/before-mobile@1x.png");
+  // background-repeat: no-repeat;
 
   @media (min-width: @tablet-width) {
-    margin-left: 0;
-    width: 338px;
-    background-image:
-      url("../img/before-tablet@1x.png"),
-      linear-gradient(to bottom, #ffffff 32.8%, #f2f2f2 0%);
+    // margin-left: 0;
+    // width: 338px;
+    // background-image:
+    //   // url("../img/before-tablet@1x.png"),
+    //   linear-gradient(to bottom, #ffffff 32.8%, #f2f2f2 32.8%);
   }
 
   @media (min-width: @desktop-width) {
-    background-image:
-      url("../img/before-desktop@1x.png"),
-      linear-gradient(to bottom, #ffffff 31.2%, #f2f2f2 0%);
-
-    width: 365px;
-    height: 607px;
+    background-image: linear-gradient(to bottom, #ffffff 36.5%, #f2f2f2 36.5%);
+    // background-image:
+    //  url("../img/before-desktop@1x.png"),
+    //  linear-gradient(to bottom, #ffffff 31.2%, #f2f2f2 31.2%);
   }
 }
