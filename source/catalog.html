@@ -5,6 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>HTML Academy: Кэт энерджи</title>
     <link href="css/style.css" rel="stylesheet">
+    <script>
+      // Picture element HTML5 shiv
+      document.createElement( "picture" );
+    </script>
+    <script src="js/picturefill.min.js" async></script>
   </head>
   <body>
     <header class="page-header">
@@ -281,7 +286,7 @@
             <li class="catalog-item show-all">
               <h3 class="show-all__title">Показать еще 100500 товаров</h3>
               <p class="show-all__text">На самом деле вкусов гораздо больше!</p>
-              <a class="show-all__button button" href="#">Показать все</a>
+              <a class="show-all__button button--gray" href="#">Показать все</a>
             </li>
           </ul>
         </section>
