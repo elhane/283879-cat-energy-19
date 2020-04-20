@@ -4,12 +4,26 @@
   .set-font-size(16px, 16px);
   color: @color-text;
 
+  &:active {
+    opacity: 0.3;
+  }
+
+
   @media (min-width: @tablet-width) {
     padding-bottom: 25px;
   }
 }
 
 .copyright__link {
+  &:hover path {
+    fill: @bc-green;
+  }
+
+  &:active path {
+    fill: @bc-green;
+    opacity: 0.3;
+  }
+
   @media (min-width: @tablet-width) {
     margin-left: 22px;
     margin-bottom: 18px;
