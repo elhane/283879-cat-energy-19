@@ -29,6 +29,10 @@
 .social__link {
   display: block;
 
+  svg {
+    fill: #666666;
+  }
+
   &:hover svg {
     fill: @bc-green;
   }
@@ -46,18 +50,25 @@
 }
 
 .social__link--vkontakte svg {
+  .set-image-size(22px, 12px);
+
   @media (min-width: @tablet-width) {
     .set-image-size(30px, 16px);
   }
 }
 
 .social__link--instagram svg {
+  .set-image-size(17px, 17px);
+  fill: #666666;
+
   @media (min-width: @tablet-width) {
     .set-image-size(23px, 23px);
   }
 }
 
 .social__link--facebook svg {
+  .set-image-size(10px, 19px);
+
   @media (min-width: @tablet-width) {
     .set-image-size(14px, 28px);
   }
