@@ -103,7 +103,7 @@ gulp.task("copy", function () {
   .pipe(gulp.dest("build"));
 });
 
-gulp.task("jsmin", function () {
+gulp.task("jsmin", async function () {
   gulp.src("source/js/**/*.js")
     .pipe(jsmin())
     .pipe(rename({suffix: ".min"}))
@@ -111,15 +111,24 @@ gulp.task("jsmin", function () {
     .pipe(server.stream());
 });
 
-gulp.task("build", function(done) {
-  gulp.series(
+// gulp.task("build", function(done) {
+//   gulp.series(
+//     "clean",
+//     "copy",
+//     "css",
+//     "sprite",
+//     "html",
+//     "jsmin")
+//   done();
+// });
+
+gulp.task("build", gulp.series(
     "clean",
     "copy",
     "css",
     "sprite",
     "html",
-    "jsmin")
-  done();
-});
+    "jsmin"
+));
 
 gulp.task("start", gulp.series("build", "server"));
