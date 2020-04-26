@@ -111,17 +111,6 @@ gulp.task("jsmin", async function () {
     .pipe(server.stream());
 });
 
-// gulp.task("build", function(done) {
-//   gulp.series(
-//     "clean",
-//     "copy",
-//     "css",
-//     "sprite",
-//     "html",
-//     "jsmin")
-//   done();
-// });
-
 gulp.task("build", gulp.series(
     "clean",
     "copy",

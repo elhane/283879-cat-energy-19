@@ -108,6 +108,8 @@
 
 .program__link {
   position: relative;
+  display: inline-block;
+  padding-right: 60px;
   font-family: @font-title;
   text-decoration: none;
   .set-uppercase();
@@ -117,8 +119,8 @@
   &::after {
     content: "";
     position: absolute;
-    top: 8px;
-    left: 95px;
+    top: 3px;
+    right: 23px;
 
     .set-image-size (25px, 12px);
     background-image: url("../img/right-arrow-icon-long.svg");
@@ -129,8 +131,7 @@
     .set-font-size(20px, 20px);
 
     &::after {
-      top: 9px;
-      left: 122%;
+      right: 12px;
     }
   }
 

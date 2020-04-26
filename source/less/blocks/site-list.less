@@ -4,6 +4,14 @@
   text-decoration: none;
   padding-bottom: 6px;
 
+  &:hover {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+
   &--active::after {
     content: "";
     position: absolute;
@@ -15,12 +23,10 @@
     width: 100%;
   }
 
-  &:hover {
-    opacity: 0.6;
-  }
-
-  &:active {
-    opacity: 0.3;
+  &--active:hover,
+  &--active:active {
+    opacity: 1;
+    cursor: auto;
   }
 
   @media (min-width: @tablet-width) {
@@ -64,10 +70,6 @@
 
   @media (max-width: @only-mobile-width) {
     border-top: 1px solid @bc-gray-border;
-
-    &:last-child {
-      border-bottom: 1px solid @bc-gray-border;
-    }
   }
 
   @media (min-width: @tablet-width) {
@@ -78,6 +80,5 @@
 
   @media (min-width: @desktop-width) {
     margin-left: 35px;
-    padding-top: 17px;
   }
 }

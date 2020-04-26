@@ -1,5 +1,6 @@
 .copyright__text {
   padding-bottom: 7px;
+  max-width: 115px;
   text-decoration: none;
   .set-font-size(16px, 16px);
   color: @color-text;
@@ -8,13 +9,26 @@
     opacity: 0.3;
   }
 
-
   @media (min-width: @tablet-width) {
     padding-bottom: 25px;
   }
 }
 
 .copyright__link {
+  display: block;
+  position: relative;
+
+  &::before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 100;
+  }
+
   svg {
     width: 27px;
     height: 34px;
