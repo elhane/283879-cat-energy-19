@@ -148,10 +148,6 @@
 .program__text {
   .set-font-size(14px, 18px);
 
-  br {
-    display: none;
-  }
-
   @media (max-width: @only-mobile-width) {
     padding-bottom: 21px;
     margin-bottom: 20px;
@@ -161,17 +157,19 @@
   @media (min-width: @tablet-width) {
     margin-bottom: 56px;
     .set-font-size(16px, 24px);
-
-    br {
-      display: block;
-    }
   }
 
   @media (min-width: @desktop-width) {
     margin-bottom: 31px;
+  }
+}
 
-    br {
-      display: none;
-    }
+.program__text--weight-gain {
+  @media (min-width: @tablet-width) {
+    padding-right: 39px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-right: 20px;
   }
 }
