@@ -1,6 +1,10 @@
 .main-nav {
   width: 100%;
 
+  @media (max-width: @only-mobile-width) {
+    border-bottom: 1px solid @bc-gray-border;
+  }
+
   @media (min-width: @tablet-width) {
     display: flex;
     justify-content: space-between;

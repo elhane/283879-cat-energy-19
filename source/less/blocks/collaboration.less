@@ -1,7 +1,6 @@
 .collaboration {
-  position: relative;
   margin-bottom: 36px;
-  padding-top: 14px;
+  padding-top: 16px;
   width: 100%;
   min-height: 476px;
 
@@ -17,11 +16,17 @@
     position: relative;
     min-height: 400px;
     padding-top: 95px;
+
+    background-color: @bc-gray;
   }
 }
 
 .collaboration--index {
   background-color: @bc-white;
+
+  @media (min-width: @desktop-width) {
+    background-color: @bc-gray;
+  }
 }
 
 .collaboration__contacts {
@@ -108,6 +113,7 @@
 }
 
 .collaboration__map {
+  position: relative;
   height: 362px;
   width: 100%;
 
@@ -140,7 +146,8 @@
     background-repeat: no-repeat;
 
     &::before {
-      top: 345px;
+      // top: 345px;
+      top: calc(22% + 62px);
       left: calc(50% - 62px);
       width: 124px;
       height: 123px;

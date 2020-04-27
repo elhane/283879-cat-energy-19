@@ -8,6 +8,7 @@
     background-color: @bc-white;
     padding-bottom: 0;
 
+
     &::before {
       content: "";
       position: absolute;
@@ -15,6 +16,7 @@
       left: 0;
 
       height: 462px;
+      // height: 100%;
       width: 100%;
       background-image: linear-gradient(to right, @bc-gray 50%, #eaeaea 50%);
     }
@@ -23,8 +25,14 @@
   @media (min-width: @desktop-width) {
     padding-top: 15px;
 
+    // background-image: linear-gradient(to bottom, #ffffff, #ffffff 205px, #f2f2f2 205px, #f2f2f2);
+
     &::before {
-      background-image: linear-gradient(to right, @bc-gray calc(50% + 300px), #eaeaea calc(50% + 300px));
+      top: 205px;
+      left: 0;
+      height: auto;
+      background-image: linear-gradient(to right, #f2f2f2 65%, #eaeaea 65%);
+      // background-image: linear-gradient(to bottom, #ffffff, #ffffff 213px, #f2f2f2 213px, #f2f2f2);
     }
   }
 }
@@ -105,6 +113,8 @@
   min-height: 56px;
   padding-top: 14px;
   padding-bottom: 11px;
+  padding-left: 15px;
+  padding-right: 15px;
 
   border: 1px solid #cdcdcd;
   border-radius: 3px;
@@ -181,6 +191,8 @@
 }
 
 .result__cost-text {
+  // display: block;
+
   @media (min-width: @tablet-width) {
     display: inline-block;
     margin-bottom: 8px;
@@ -201,7 +213,7 @@
 }
 
 .result__image {
-  display: block;
+  // display: block;
   margin-bottom: 59px;
 
   @media (max-width: @only-mobile-width) {
@@ -230,7 +242,8 @@
 
   @media (min-width: @desktop-width) {
     right: 0;
-    background-image: linear-gradient(to top, #eaeaea 462px, #ffffff 462px);
+    // background-image: linear-gradient(to top, #eaeaea 462px, #ffffff 462px);
+    background-image: linear-gradient(to bottom, #ffffff 190px, #eaeaea 190px);
   }
 }
 
@@ -250,7 +263,8 @@
 
   @media (min-width: @desktop-width) {
     width: 365px;
-    background-image: linear-gradient(to top, #f2f2f2 462px, #ffffff 462px);
+    // background-image: linear-gradient(to top, #f2f2f2 462px, #ffffff 462px);
+    background-image: linear-gradient(to bottom, #ffffff 190px, #f2f2f2 190px);
     overflow: hidden;
   }
 }
@@ -266,8 +280,10 @@
   }
 
   @media (min-width: @desktop-width) {
+    position: relative;
     margin-left: 0;
     padding-bottom: 0;
+    padding-left: 0;
   }
 }
 
@@ -293,11 +309,17 @@
   }
 
   @media (min-width: @desktop-width) {
-    left: auto;
+    // left: auto;
+    // right: 0;
+    // bottom: 73px;
+    // padding: 0;
+    // width: 570px;
+    top: 543px;
+    left: 120px;
     right: 0;
-    bottom: 73px;
     padding: 0;
     width: 570px;
+    height: 50px;
   }
 }
 
