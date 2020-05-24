@@ -107,6 +107,13 @@
       line-height: 281px;
       text-align: right;
     }
+
+    &:nth-child(n+10) {
+      &::after {
+        left: 87px;
+        letter-spacing: -35px;
+      }
+    }
   }
 
   @media (min-width: @desktop-width) {
