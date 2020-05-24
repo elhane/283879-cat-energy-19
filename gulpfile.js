@@ -1,5 +1,4 @@
 "use strict";
-
 var gulp = require("gulp");
 var plumber = require("gulp-plumber");
 var sourcemap = require("gulp-sourcemaps");
@@ -18,6 +17,9 @@ var posthtml = require("gulp-posthtml");
 var include = require("posthtml-include");
 var jsmin = require('gulp-jsmin');
 var del = require("del");
+
+var ghPages = require('gh-pages');
+var path = require('path');
 
 gulp.task("css", function () {
   return gulp.src("source/less/style.less")
@@ -56,7 +58,7 @@ gulp.task("images", function() {
   return gulp.src("source/img/**/*.{png,jpg,svg}")
     .pipe(imagemin([
       imagemin.optipng({optimizationlevel: 3}),
-      imagemin.jpegtran({progressive: true}),
+      imagemin.mozjpeg({progressive: true}),
       imagemin.svgo()
     ]))
     .pipe(gulp.dest("build/img")); //source или build??
@@ -119,5 +121,10 @@ gulp.task("build", gulp.series(
     "html",
     "jsmin"
 ));
+
+function deploy(cb) {
+  ghPages.publish(path.join(process.cwd(), './build'), cb);
+}
+exports.deploy = deploy;
 
 gulp.task("start", gulp.series("build", "server"));
