@@ -1158,6 +1158,10 @@ img {
     line-height: 281px;
     text-align: right;
   }
+  .description__item:nth-child(n+10)::after {
+    left: 87px;
+    letter-spacing: -35px;
+  }
 }
 @media (min-width: 1300px) {
   .description__item {
@@ -3046,6 +3050,9 @@ img {
   padding-bottom: 9px;
   padding-right: 15px;
 }
+.form__label-checkbox:focus {
+  outline: none;
+}
 .form__label-checkbox:active {
   opacity: 0.3;
 }
@@ -3115,6 +3122,9 @@ img {
   padding-bottom: 7px;
   padding-right: 15px;
 }
+.form__label-radio:focus {
+  outline: none;
+}
 .form__label-radio:active {
   opacity: 0.3;
 }
@@ -3180,6 +3190,12 @@ img {
 .form__input-radio:disabled + .form__label-radio {
   opacity: 0.3;
 }
+.form__input-radio:focus + .form__label-radio::before {
+  outline: 5px auto -webkit-focus-ring-color;
+}
+.form__input-checkbox:focus + .form__label-checkbox::before {
+  outline: 5px auto -webkit-focus-ring-color;
+}
 .form__input-field {
   width: 100%;
   height: 45px;
@@ -3244,20 +3260,35 @@ img {
     height: 52px;
   }
 }
-.form__row--email .form__input-field,
-.form__row--phone .form__input-field {
+.form__input-field--email,
+.form__input-field--phone {
   padding-right: 45px;
 }
 @media (min-width: 768px) {
-  .form__row--email .form__input-field,
-  .form__row--phone .form__input-field {
+  .form__input-field--email,
+  .form__input-field--phone {
     padding-right: 55px;
   }
 }
 @media (min-width: 1300px) {
-  .form__row--email .form__input-field,
-  .form__row--phone .form__input-field {
+  .form__input-field--email,
+  .form__input-field--phone {
     padding-right: 55px;
+  }
+}
+@media (max-width: 767px) {
+  .form__input-field--email {
+    width: 218px;
+  }
+}
+@media (max-width: 767px) {
+  .form__input-field--phone {
+    width: 201px;
+  }
+}
+@media (max-width: 767px) {
+  .form__input-field--age {
+    width: 174px;
   }
 }
 .form__header-line {
